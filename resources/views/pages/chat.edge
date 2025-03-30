@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html color-scheme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Chat with AI
+    </title>
+
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=instrument-sans:400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" /> --}}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/digitallytailored/classless@latest/classless.min.css"
+    />
+
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('dumper') --}}
+  </head>
+  <body class="min-h-screen w-screen font-display">
+
+    <main class="container">
+      <section>
+        <div id="userName" style="text-align: center; margin-bottom: 1rem;">
+        </div>
+        <video id="localVideo" autoplay playsinline controls="false" style="margin: 0 auto;">
+        </video>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button id="call" class="success">Call!</button>
+        </div>
+      </section>
+      <section>
+        <div id="answer" style="text-align: center; margin-bottom: 1rem;">
+
+        </div>
+        <video id="remoteVideo" autoplay playsinline controls="false" style="margin: 0 auto;">
+        </video>
+      </section>
+
+    </main>
+    {{-- <script type="module" src="resources/js/basicWebRTC.js">
+      
+    </script> --}}
+    <script src="/socket.io/socket.io.js">
+      
+    </script>
+    <script>
+      // Wait for the page to fully load
+      window.addEventListener("load", function() {
+        console.log("Page fully loaded");
+      });
+    </script>
+    <script src="resources/js/chat.js">
+      
+    </script>
+    <script src='resources/js/socketListeners.js'>
+      
+    </script>
+
+  </body>
+</html>
